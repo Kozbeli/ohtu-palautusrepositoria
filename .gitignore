@@ -1,0 +1,8 @@
+*.tmp
+
+__pycache__
+htmlcov
+
+.pytest_cache
+.coveragerc
+.coverage
