@@ -12,16 +12,11 @@ class Ostoskori:
         # eli jos koriin lisätty 2 kpl tuotetta "maito", tulee metodin palauttaa 2
         # samoin jos korissa on 1 kpl tuotetta "maito" ja 1 kpl tuotetta "juusto", tulee metodin palauttaa 2
         maara = 0
-        for ostos in self.ostokset:
-            maara += ostos.lukumaara()
-        return maara
+        return sum([self.ostokset[ostost].hinta() for ostost in self.ostokset])
 
     def hinta(self):
         # kertoo korissa olevien ostosten yhteenlasketun hinnan
-        summa = 0
-        for ostos in self.ostokset:
-            summa += ostos.hinta()
-        return summa
+        return sum([self.ostokset[ostos].hinta() for ostos in self.ostokset])
 
     def lisaa_tuote(self, lisattava: Tuote):
         nimi = lisattava.nimi()
