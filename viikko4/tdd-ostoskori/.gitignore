@@ -1,6 +1,6 @@
 .vscode
 .DS_Store
-__init__.py
+.pytest_cache
 __pycache__
 *.py[cod]
 *$py.class
